@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order</title>
+  <link rel="stylesheet" href="/stylesheet/styles.css">
+</head>
+
+<body>
+<div class="container">
+  <h1>Place an Order</h1>
+  <form action='/confirmed' method='POST'>
+  
+      <!-- STYLE -->
+      <label for="style">Style</label>
+      <input type="text" id="style"/>
+  
+      <!-- SERVINGS -->
+      <label for="servings">Servings</label>
+      <input type="text" id="servings"/>
+  
+      <!-- FLAVOR -->
+        <label for="flavor">Flavor</label>
+        <input type="text" id="flavor"/>
+  
+      <!-- DATE -->
+      <label for="date">Date</label>
+      <input type="date" id="date"/>
+    
+      <!-- DATE -->
+      <div class="service">
+        <label for="service">Choose Service</label>
+        <select>
+        <option value="Pick up">Pick Up</option>
+        <option value="Delivery">Delivery</option>
+        </select> 
+      </div>
+
+        <!-- submit button -->
+        <div class="button">
+          <input type="submit" value="Submit">
+        </div>
+       
+  
+      </div>
+     
+    
+    
+      
+  </form>
+  </div>
+  
+</body>
+</html>
+
+
