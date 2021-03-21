@@ -1,0 +1,1 @@
+//controller pulls data from the model into the views 

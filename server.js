@@ -1,42 +1,38 @@
 const express = require('express');
 const { model } = require('mongoose');
+const morgan = require("morgan");
 const path = require('path');
+require("./config/database");
+
+
+// require routers 
+const indexRouter = require('./routes/index');
+const aboutRouter = require('./routes/about');
+const menuRouter = require('./routes/menu');
+const orderRouter = require('./routes/order');
+
+
 const app = express();
 
+// mounts routes from index router and attaches it to the root 
+app.use('/', indexRouter); 
+app.use('/about', aboutRouter);
+app.use('/menu', menuRouter);
+app.use('/order', orderRouter);
+app.post('/order', orderRouter);
+
+
+///////////////////////////////////////////////////////
 app.use(express.urlencoded({extended: false}));
 
 app.use(express.static('public'));
-app.use('/stylesheet', express.static(__dirname + 'public/stylesheet'));
-
-
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
-
-
-
-app.get('/', (req, res) => {
-    res.render('index')
-})
-
-
-app.get('/about', (req, res) => {
-    res.render('about')
-})
-
-app.get('/menu', (req, res) => {
-    res.render('menu')
-})
-
-app.get('/order', (req, res) => {
-    res.render('order')
-})
-
-app.post('/confirmed', (req, res) => {
-    // req.body.order
-    res.render('confirmed')
-})
+app.use(morgan("dev"));
+////////////////////////////////////////////////////////
 
 
 model.export = express
