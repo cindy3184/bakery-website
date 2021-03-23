@@ -1,10 +1,12 @@
 const express = require('express');
-const router = express.Router();
+const router = express.Router(); //access express router 
+
 
 
 router.get('/', (req, res) => {
-    res.render('about/index')
-})
+    res.render('reviews')
+});
+
 
 
 module.exports = router; 

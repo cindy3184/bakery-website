@@ -5,7 +5,7 @@ const Order = require('../models/order');
 function confirm(req, res) {
     Order.find({}, function(err, orders) {
         console.log(orders);
-        res.render('orders/confirm')
+        res.render('orders/confirm', { orders });
     });
 }
 
@@ -23,15 +23,12 @@ function newOrder(req, res) {
 
 
 function create(req, res) {
-    // remove empty/blank inputs from req.body
     for (let key in req.body) {
       if (req.body[key] === "") delete req.body[key];
     }
-  
+
     Order.create(req.body, function (err, order) {
-      // one way to handle errors
       if (err) return res.redirect("/orders");
-      // for now, redirect right back to the "new" view
       res.redirect(`/orders/${order._id}`); //access ID property
     });
   }
