@@ -3,23 +3,15 @@ const Order = require('../models/order');
 
 
 function confirm(req, res) {
-    Order.find({}, function(err, orders) {
+    Order.findById(req.params.id).exec(function(err, orders) {
         console.log(orders);
         res.render('orders/confirm', { orders });
-    });
-}
+    })
+    };
 
 function newOrder(req, res) {
     res.render('orders/index');
 };
-
-// function create(req, res) {
-//     Order.create(req.body, function(err, order) {
-//         console.log(order);
-//         res.redirect('/orders');
-//     });
-//     console.log(req.body)
-// }
 
 
 function create(req, res) {
@@ -29,7 +21,7 @@ function create(req, res) {
 
     Order.create(req.body, function (err, order) {
       if (err) return res.redirect("/orders");
-      res.redirect('/orders/confirm'); 
+      res.redirect(`/orders/${order._id}`); 
     });
   }
   

@@ -3,7 +3,7 @@ const router = express.Router();
 const ordersCtrl = require('../controllers/orders');
 
 router.get('/', ordersCtrl.new);
-router.get('/confirm', ordersCtrl.confirm);
+router.get('/:id', ordersCtrl.confirm);
 router.post('/confirm', ordersCtrl.create);
 
 

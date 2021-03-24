@@ -3,6 +3,6 @@ const express = require('express');
 const router = express.Router();
 const ordersCtrl = require('../controllers/orders');
 
-router.get('/orders/confirm', ordersCtrl.confirm);
+// router.get('/orders/:id', ordersCtrl.confirm);
 
 module.exports = router; 
