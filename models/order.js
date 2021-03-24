@@ -13,17 +13,15 @@ const orderSchema = new Schema({
     type: String,
   },
   servings: {
-    type: Number, min: 10, max: 9999, default: 10
+    type: Number,
   },
   flavor: {
     type: String,
   },
   date: {
     type: Date, 
-    default: function () {
-        return new Date().getFullYear();
 },
-}}); 
+}); 
 
 {
   timestamps: true

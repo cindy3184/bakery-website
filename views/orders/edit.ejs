@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+
+
+<div class="edit-order">
+  <h1>Edit Order</h1>
+
+  <form action='/orders/<%=orders._id%>?_method=PUT' method="POST" id='new-form'>
+
+
+  <label>Name:</label>
+  <input type="text" name="name" value="<%= orders.name %>"> 
+
+  <label>Style:</label>
+  <input type="text" name="style" value="<%= orders.style %>">
+
+  <label>Servings:</label>
+  <input type="text" name="servings" value="<%= orders.servings %>">
+
+  <label>Flavor:</label>
+  <input type="text" name="flavor" value="<%= orders.flavor %>">
+
+  <label>Date of Event:</label>
+  <input type="date" name="date" value="<%= orders.date %>">
+    
+
+  <input type="submit" class="button" value="Submit">
+
+
+</div>
+</form>

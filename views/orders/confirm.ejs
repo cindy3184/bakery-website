@@ -1,5 +1,8 @@
 <%- include('../partials/header') %>
 
+
+<h1>Your order has been submitted!</h1>
+
     <label>Name:</label>
     <%= orders.name %>
     <br>
@@ -14,15 +17,24 @@
     
     <br>
     
-    <label>Flavor</label>
+    <label>Flavor:</label>
     <%= orders.flavor %>
     
     <br>
     
-    <label>Date</label>
+    <label>Date of Event:</label>
     <%= orders.date %>
-    
+<br>
 
+
+    <div class="buttons">
+        
+        <a href="/orders/<%=orders._id%>/edit" class ="editbtn">Edit Order</a>
+
+        <form action="/orders/<%=orders._id%>?_method=DELETE" method="delete">
+            <button type="submit">Delete Order</button>
+        </form>
+    </div> 
 
 
 <%- include('../partials/footer') %>

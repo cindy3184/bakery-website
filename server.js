@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const methodOverride = require('method-override');
 const path = require('path');
 // connect to db
 require("./config/database");
@@ -36,6 +37,7 @@ app.use('/', indexRouter);
 app.use('/reviews', reviewsRouter);
 app.use('/menu', menuRouter);
 app.use('/orders', ordersRouter);
+app.use(methodOverride('_method'));
 // app.use('/order/confirm', confirmRouter);
 
 

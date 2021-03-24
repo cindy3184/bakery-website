@@ -21,14 +21,37 @@ function create(req, res) {
 
     Order.create(req.body, function (err, order) {
       if (err) return res.redirect("/orders");
-      res.redirect(`/orders/${order._id}`); 
+      res.redirect(`/orders/${order._id}`);       
     });
   }
   
-  
+  function edit(req, res) {
+    Order.findById(req.params.id, (err, orders) => {
+        res.render('orders/edit', { orders });
+    })
+}
+
+
+function deleteOrder(req, res) {
+  Order.findByIdAndRemove(req.params.id, (err, deleteOrder => {
+      res.redirect('orders/index')
+  }))
+}
+
+function update(req, res) {
+  Order.findByIdAndUpdate(req.params.id, req.body, (err, updateOrder) => {
+      res.redirect(`/orders/${order._id}`);
+  });
+}
+
+
 
 module.exports = {
     new: newOrder,
     create,
     confirm,
+    deleteOrder,
+    edit,
+    update,
+    
 };
