@@ -1,28 +1,6 @@
 <%- include('../partials/header') %>
 
 
-<p>Please confirm your order.</p>
-
-
-<% orders.forEach(function(o) { %>
-<label>Name</label>
-<%= o.name %>
-
-
-<label>Style</label>
-<%= o.style %>
-
-<label>Servings</label>
-<%= o.servings %>
-
-<label>Flavor</label>
-<%= o.flavor %>
-
-<label>Date</label>
-<%= o.date %>
-
-<button>Confirm</button>
-<button><a href="/orders">Edit</a></button>
 
 
 <%- include('../partials/footer') %>

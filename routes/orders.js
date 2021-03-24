@@ -3,9 +3,8 @@ const router = express.Router();
 const ordersCtrl = require('../controllers/orders');
 
 router.get('/', ordersCtrl.new);
-router.post('/', ordersCtrl.create);
-router.post('/confirm', ordersCtrl.confirm);
-
+router.get('/confirm', ordersCtrl.confirm);
+router.post('/confirm', ordersCtrl.create);
 
 
 module.exports = router; 

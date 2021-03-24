@@ -1,7 +1,8 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
-
+// connect to db
+require("./config/database");
 
 
 
@@ -10,12 +11,12 @@ const indexRouter = require('./routes/index');
 const reviewsRouter = require('./routes/reviews');
 const menuRouter = require('./routes/menu');
 const ordersRouter = require('./routes/orders');
+// const confirmRouter = require('./routes/confirm');
 
 
 const app = express();
 
-// connect to db
-require("./config/database");
+
 
 ///////////////////////////////////////////////////////
 app.use(express.urlencoded({ extended: false }));
@@ -35,6 +36,7 @@ app.use('/', indexRouter);
 app.use('/reviews', reviewsRouter);
 app.use('/menu', menuRouter);
 app.use('/orders', ordersRouter);
+// app.use('/order/confirm', confirmRouter);
 
 
 app.listen(4000);

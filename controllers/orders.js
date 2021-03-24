@@ -29,7 +29,7 @@ function create(req, res) {
 
     Order.create(req.body, function (err, order) {
       if (err) return res.redirect("/orders");
-      res.redirect(`/orders/${order._id}`); //access ID property
+      res.redirect('/orders/confirm'); 
     });
   }
   
