@@ -2,6 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 const path = require('path');
+const port = process.env.PORT; || 4000;
 // connect to db
 require("./config/database");
 
@@ -33,12 +34,15 @@ app.use(morgan("dev"));
 
 
 // mounts routes from index router and attaches it to the root 
+app.use(methodOverride('_method'));
 app.use('/', indexRouter); 
 app.use('/reviews', reviewsRouter);
 app.use('/menu', menuRouter);
 app.use('/orders', ordersRouter);
-app.use(methodOverride('_method'));
+
 // app.use('/order/confirm', confirmRouter);
 
 
-app.listen(4000);
+app.listen(port, function () {
+    console.log(`express is listening on port: ${port}`);
+}
