@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const methodOverride = require('method-override');
 const path = require('path');
 const port = process.env.PORT || 4000;
+require("dotenv").config();
 // connect to db
 require("./config/database");
 
