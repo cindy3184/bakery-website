@@ -2,7 +2,7 @@ const express = require('express');
 const morgan = require('morgan');
 const methodOverride = require('method-override');
 const path = require('path');
-const port = process.env.PORT; || 4000;
+const port = process.env.PORT || 4000;
 // connect to db
 require("./config/database");
 
