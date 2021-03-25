@@ -4,16 +4,15 @@
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
-};
+}
 
 
-/* HOMEPAGE  */
 
 .child-one {
   width: 20%;
   margin-left: 20%;
   padding-top: 200px;
-};
+}
 
   
 .child-two {
@@ -23,18 +22,17 @@
   margin-left: 10%;
   position: relative;
 
-};
+}
 
 @media (min-width: 768px) {
   .parent {
     display: flex;
   }
-};
+}
 
 h1 {
   color:#474747;
-};
-
+}
 .header {
   padding: 30px 45px 30px 45px;
   background-color: #F6F6F6;
@@ -42,16 +40,16 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-};
+}
 
 
 
-/* NAV BAR */
+
 
 .nav a {
   text-decoration: none;
   color: #979797 ;
-};
+}
 
 
 .nav {
@@ -60,12 +58,12 @@ h1 {
   padding: 0;
   display: flex;
   margin-left:inherit;
-};
+}
 
 .nav li {
   margin-left: 50px;
   display: flex;
-};
+}
 
 #orderbtn {
   background-color:#78A599;
@@ -77,19 +75,19 @@ h1 {
   align-content: center;
   transition: 0.2s ease-in-out;
 
-};
+}
 
 #orderbtn:hover {
   background-color: #474747;
   transition: 0.2s ease-in-out;
-};
+}
 
 /* form */
 
   .container {
     margin-left: 100px;
   margin-top: 80px;
-  };
+  }
   
   input {
     width: 50%;
@@ -118,8 +116,6 @@ h1 {
   }
 
   
-
-  /* FOOTER */
   #content-wrap {
     padding-bottom: 2.5rem;    /* Footer height */
   }
@@ -171,7 +167,6 @@ a:hover {
 
 
 
-/* CARDS */
 
   .card {
     display: grid;
@@ -261,11 +256,6 @@ a:hover {
   margin-top: 50px;
   }
 
-
-
-
-/* CONFIRM PAGE  */
-
 .confirm {
   margin-left: 100px;
   margin-top: 100px;
@@ -287,6 +277,8 @@ a:hover {
 .editbtn {
   margin: auto;
 }
+
+
 
 .edit-order {
   margin-left: 100px;

@@ -32,16 +32,17 @@ function create(req, res) {
 }
 
 
-function deleteOrder(req, res) {
-  Order.findByIdAndRemove(req.params.id, (err, deleteOrder => {
-      res.redirect(`/orders/${deleteOrder._id}`)
-  }))
+function update(req, res) {
+  Order.findByIdAndUpdate(req.params.id, req.body, (err, order) => {
+      res.redirect(`/orders/${order._id}`);
+  });
 }
 
-function update(req, res) {
-  Order.findByIdAndUpdate(req.params.id, req.body, (err, updateOrder) => {
-      res.redirect(`/orders/${updateOrder._id}`);
-  });
+
+function deleteOrder(req, res) {
+  Order.findByIdAndRemove(req.params.id, (err, orders) => {
+      res.redirect('/orders')
+  })
 }
 
 

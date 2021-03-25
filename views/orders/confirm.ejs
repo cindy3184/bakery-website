@@ -25,19 +25,18 @@
     <label>Date of Event:</label>
     <%= orders.date %>
 <br>
-
 </section>
 
 
-
-
-
-<span class="buttons">
-        
-    <a href="/orders/<%=orders._id%>/edit" class ="editbtn">Edit Order</a>
 <br>
-    <a href="/orders/<%=orders._id%>?_method=DELETE" method=delete class="deletebtn">Delete Order</a>
-</span> 
+<div class="buttons">
+    
+    <a href="/orders/<%=orders._id%>/edit" class ="editbtn">Edit Order</a>
+
+    <form action="/orders/<%=orders._id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete Order</button>
+    </form>
+</div> 
 
 
 <%- include('../partials/footer') %>
