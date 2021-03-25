@@ -57,11 +57,11 @@ h1 {
   margin: 0;
   padding: 0;
   display: flex;
-  margin-left: auto;
+  margin-left:inherit;
 }
 
 .nav li {
-  margin-left: 20px;
+  margin-left: 50px;
   display: flex;
 }
 
@@ -71,16 +71,26 @@ h1 {
   color: white;
   width: 70px;
   padding: 15px;
-  border-radius: 20px;
+  border-radius: 50px;
   align-content: center;
   transition: 0.2s ease-in-out;
 
 }
 
+#orderbtn:hover {
+  background-color: #474747;
+  transition: 0.2s ease-in-out;
+}
+
 /* form */
 
+  .container {
+    margin-left: 100px;
+  margin-top: 80px;
+  }
+  
   input {
-    width: 100%;
+    width: 50%;
     margin: 10px 0;
     padding: 10px;
     box-sizing: border-box;
@@ -88,15 +98,16 @@ h1 {
     border-radius: 5px;
   }
 
-  .button {
+  .btn-position {
     width: 40%;
     height: 50px;
-    margin: auto;
-    padding: 10px;
+    margin: 30px;
+    margin-left: 100px;
     align-content: center;
     transition: 0.2s ease-in-out;
 
   }
+
 
   input[type="submit"]:hover {
     cursor: pointer;
@@ -160,7 +171,7 @@ a:hover {
   .card {
     display: grid;
     grid-template-columns: 300px;
-    grid-template-rows: 210px 210px 80px;
+    grid-template-rows: 320px 210px 20px;
     grid-template-areas: "image" "text";
     border-radius: 18px;
     background-color: white;
@@ -172,6 +183,7 @@ a:hover {
 
   }
 
+  
   .card-image {
     grid-area: image;
     background: url("https://i.imgur.com/XYrP33v.jpg");
@@ -179,6 +191,53 @@ a:hover {
     border-top-right-radius: 15px;
     background-size:cover;
   }
+
+
+  .card-image-two {
+    grid-area: image;
+    background: url("https://i.imgur.com/3VphWYi.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size:cover;
+  }
+
+
+  .card-image-three {
+    grid-area: image;
+    background: url("https://i.imgur.com/bafB5Gg.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size:cover;
+  }
+
+
+  .card-image-four {
+    grid-area: image;
+    background: url("https://i.imgur.com/WEpVKkv.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size:cover;
+  }
+
+
+  .card-image-five {
+    grid-area: image;
+    background: url("https://i.imgur.com/MtphiKd.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size:cover;
+  }
+
+
+
+  .card-image-six {
+    grid-area: image;
+    background: url("https://i.imgur.com/FQulhKQ.jpg");
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size:cover;
+  }
+
 
   .card-text {
     grid-area: text;
@@ -194,5 +253,34 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 50px;
   }
+
+.confirm {
+  margin-left: 100px;
+  margin-top: 100px;
+}
+
+.buttons {
+  background-color:#78A599;
+  display: flex;
+  text-decoration: none;
+  color: white;
+  width: 70px;
+  padding: 15px;
+  border-radius: 20px;
+  margin-left: 100px;
+  transition: 0.2s ease-in-out;
+
+}
+
+.editbtn {
+  margin: auto;
+}
+
+
+
+.edit-order {
+  margin-left: 100px;
+  margin-top: 100px;
+}

@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
 
-
+<section class="confirm">
 <h1>Your order has been submitted!</h1>
 
     <label>Name:</label>
@@ -26,15 +26,15 @@
     <%= orders.date %>
 <br>
 
+</section>
 
-    <div class="buttons">
+<span class="buttons">
         
-        <a href="/orders/<%=orders._id%>/edit" class ="editbtn">Edit Order</a>
+    <a href="/orders/<%=orders._id%>/edit" class ="editbtn">Edit Order</a>
 
-        <form action="/orders/<%=orders._id%>?_method=DELETE" method="delete">
-            <button type="submit">Delete Order</button>
-        </form>
-    </div> 
-
+    <form action="/orders/<%=orders._id%>?_method=DELETE" method="delete">
+        <button type="submit">Delete Order</button>
+    </form>
+</span> 
 
 <%- include('../partials/footer') %>
