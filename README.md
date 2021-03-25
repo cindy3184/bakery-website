@@ -2,14 +2,14 @@
 A webiste showcasing bakery menu and allowing users to place an order
 
 # Technologies Used
-HTML5
-CSS3
-JS
-MongoDB
-Express
-Node.js
-Git/Github
-Heroku
+* HTML5
+* CSS3
+* JS
+* MongoDB
+* Express
+* Node.js
+* Git/Github
+* Heroku
 
 # App Design 
 
