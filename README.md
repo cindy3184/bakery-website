@@ -1,4 +1,4 @@
-# Bakery-website
+# 🧁 Bakery-website
 A webiste showcasing bakery menu and allowing users to place an order
 
 # Technologies Used
