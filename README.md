@@ -14,4 +14,8 @@ A webiste showcasing bakery menu and allowing users to place an order
 # Getting Started 
 [click here](https://sweetcin-bakery-website.herokuapp.com) to view project.
 
-
+# Future Edits
+* Fix responsiveness
+* Add more styling
+* More detailed form
+* E-mail confirmation
