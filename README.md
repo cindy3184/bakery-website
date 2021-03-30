@@ -1,5 +1,5 @@
 # 🧁 Bakery Website
-A webiste showcasing bakery menu and allowing users to place an order
+A website showcasing bakery menu and allowing users to place an order
 
 # Technologies Used
 * HTML5
